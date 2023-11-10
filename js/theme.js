@@ -267,31 +267,54 @@
 
 
     // brand Active
-    $('.brand_list').owlCarousel({
-        loop: true,
+    // $('.brand_list').owlCarousel({
+    //     loop: true,
+    //     autoplay: true,
+    //     autoplayTimeout: 10000,
+    //     dots: false,
+    //     nav: false,
+    //     navText: ["<i class='fa fa-long-arrow-left''></i>", "<i class='fa fa-long-arrow-right''></i>"],
+    //     responsive: {
+    //         0: {
+    //             items: 2
+    //         },
+    //         768: {
+    //             items: 4
+    //         },
+    //         992: {
+    //             items: 5
+    //         },
+    //         1000: {
+    //             items: 6
+    //         },
+    //         1920: {
+    //             items: 6
+    //         }
+    //     }
+    // })
+    $(".brand_list").slick({
+        slidesToShow: 1,
+        infinite: true,
         autoplay: true,
-        autoplayTimeout: 10000,
-        dots: false,
-        nav: false,
-        navText: ["<i class='fa fa-long-arrow-left''></i>", "<i class='fa fa-long-arrow-right''></i>"],
-        responsive: {
-            0: {
-                items: 2
+        draggable: true,
+        arrows: true,
+        slidesToScroll: 1,
+        loop: true,
+        dots: true,
+        speed: 1500,
+        prevArrow:
+            "<button type='button' class='slider-arrow-btn prev-btn'><i class='fa fa-long-arrow-left'></i></button>",
+        nextArrow:
+            "<button type='button' class='slider-arrow-btn next-btn'><i class='fa fa-long-arrow-right'></i></button>",
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    autoplay: true,
+                },
             },
-            768: {
-                items: 4
-            },
-            992: {
-                items: 5
-            },
-            1000: {
-                items: 6
-            },
-            1920: {
-                items: 6
-            }
-        }
-    })
+        ],
+    });
 
     // brand Active
     $('.blog_list').owlCarousel({
