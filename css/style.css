@@ -6391,7 +6391,7 @@ blockquote footer {
     margin-left: 50px;
 }
 
-blockquote footer::before {
+blockquote footer::before { 
     position: absolute;
     content: "\f10e";
     height: 3px;
