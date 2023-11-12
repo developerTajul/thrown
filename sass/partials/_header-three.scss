@@ -1,0 +1,68 @@
+.header-area {
+  &.style-three {
+    position: unset;
+
+    // Header Top Area
+    .header-top {
+      .header-top-btn {
+        a {
+          margin-bottom: inherit;
+          padding: 6px 46px;
+
+          &:before {
+            border-radius: 0;
+            transform: skewX(-20deg);
+          }
+        }
+      }
+    }
+
+    // Header Menu Area
+    .header-menu-area {
+      .logo {
+          height: 107px;
+
+        @include rmaxwd(991) {
+          height: 80px;
+        }
+      }
+      .main-menu {
+        ul {
+          ul {
+            border-color: $title-color;
+          }
+          li {
+            a {
+              color: $title-color;
+              padding: 39.5px 24px;
+
+              &:before {
+                border-color: $title-color;
+                right: 8px;
+              }
+              &:hover {
+                &:before {
+                  border-color: $title-color;
+                }
+              }
+            }
+            &.active {
+              a {
+                &:before {
+                  border-color: $title-color;
+                }
+              }
+            }
+            ul {
+              li {
+                a {
+                  padding: 10px 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
