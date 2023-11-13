@@ -43,8 +43,8 @@
 
 /* Widget */
 .widget {
-  background-color: $background;
-  padding: 40px 40px 33px 40px;
+  background-color: #F5F5F5;
+  padding: 30px 22px;
   border-radius: 4px;
   margin-bottom: 32px;
   @include sm{
@@ -59,7 +59,7 @@
     margin-bottom: 0;
   }
   &.widget_search {
-    padding: 40px;
+    padding: 30px 22px;
     @include lg {
       padding: 30px;
     }
@@ -68,22 +68,24 @@
   .wp-block-heading,
   .widget-title {
     display: block;
-    font-family: $heading-font;
-    font-weight: 600;
+    color: #18191D;
+    font-family: Rubik;
     font-size: 24px;
-    line-height: 34px;
-    letter-spacing: 0.02em;
-    color: $title-color;
-    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 45px;
     position: relative;
-    margin-top: -10px;
+    margin-top: -8px;
 
     &:before {
-      content: "\f0da";
-      font-family: "Font Awesome 6 Pro";
-      margin-right: 6px;
-      color: $sky-color;
-      display: none;
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 58px;
+      background: $primary-color;
+      left: 0;
+      bottom: -10px;
     }
   }
 
@@ -291,10 +293,10 @@
   }
   .wp-block-search,
   .search-form {
-    display: inline-block;
+    display: flex;
     width: 100%;
     overflow: hidden;
-    // border: 1px solid #e0e0e0;
+    border: 1px solid $primary-color;
     // padding: 24px;
 
     .wp-block-search__inside-wrapper {
@@ -319,28 +321,25 @@
     }
     input {
       background-color: $white;
-      border-radius: 4px;
       padding: 0 25px;
       height: 60px;
       width: 100%;
-      color: $text-color;
+      color: #606060;
       font-family: $body-font;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 27px;
-      color: $text-color;
-      margin-right: 8px;
+      border: none;
     }
     button {
-      color: $title-color;
+      color: $white;
       padding: 0 24px;
       position: relative;
       right: 0;
-      background: $brand;
+      background: $primary-color;
       top: 0;
       height: auto;
-      border-radius: 4px;
       line-height: 30px;
       border-color: transparent
     }
@@ -370,9 +369,9 @@
       @include transition;
 
       &:hover {
-        color: $title-color;
-        background: $brand;
-        border-color: $brand;
+        color: $white;
+        background: $primary-color;
+        border-color: $primary-color;
         @include transition;
       }
     }
@@ -484,6 +483,7 @@
         text-align: right;
         display: inline-block;
         width: 100%;
+        padding-bottom: 4px;
 
         &.cat-item {
           text-align: right;
@@ -677,13 +677,12 @@
   ul {
     li {
       display: flex;
-      flex-direction: column;
-      gap: 32px;
+      gap: 22px;
       margin-bottom: 32px;
       padding-bottom: 16px;
       border: none;
       border-bottom: 1px solid #e0e0e0;
-      align-items: start;
+      align-items: center;
 
       &:last-child {
         margin-bottom: 0;
@@ -701,6 +700,7 @@
       .latest-post-thumb {
         flex-shrink: 0;
         overflow: hidden;
+        border-radius: 50%;
 
         img {
           width: 100%;
@@ -718,32 +718,43 @@
         .latest-post-type,
         .news-tag,
         .post-type a{
-          padding: 4px 16px;
-          font-size: 16px;
           font-family: $body-font;
-          line-height: 170%;
-          border: 1px solid #bdbdbd;
-          border-radius: 4px;
-          margin-bottom: 16px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+          margin-right: 30px;
           display: inline-block;
+          margin-right: 30px;
+          margin-bottom: 10px;
+          color: $title-color;
+
+          i{
+            margin-right: 5px;
+            color: $primary-color;
+          }
+          &:last-child{
+            margin-right: 0;
+          }
         }
         .latest-post-title {
           margin-bottom: 8px;
-          font-size: 18px;
           font-family: $heading-font;
+          font-size: 18px;
           font-weight: 500;
-          line-height: 140%;
+          line-height: 28px;
+          text-decoration: none;
 
           a {
             color: $title-color;
-            font-size: 18px;
             font-family: $heading-font;
+            font-size: 18px;
             font-weight: 500;
-            line-height: 140%;
+            line-height: 28px;
+            text-decoration: none;
             @include transition;
 
             &:hover {
-              color: $title-color;
+              color: $primary-color;
               @include transition;
             }
           }
