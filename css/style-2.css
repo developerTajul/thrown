@@ -49,7 +49,7 @@ Tags: architect, building company, construction, construction template, construc
     position: relative;
 }
 
-.thrown-topbar-area::before {
+/* .thrown-topbar-area::before {
     position: absolute;
     content: "";
     width: 500px;
@@ -57,7 +57,7 @@ Tags: architect, building company, construction, construction template, construc
     left: 0;
     top: 0;
     background: #0154F7;
-}
+} */
 
 .topbar-info span {
     font-size: 16px;
@@ -88,6 +88,7 @@ Tags: architect, building company, construction, construction template, construc
 .topbar-social-item ul {
     list-style: none;
     display: inline-block;
+    margin-bottom: 0;
 }
 
 .topbar-social-item ul li {
@@ -151,18 +152,18 @@ Tags: architect, building company, construction, construction template, construc
 }
 
 .thrown-header-area::before {
-    position: absolute;
+    /* position: absolute;
     content: "";
     width: 500px;
     height: 100%;
     background: #0154F7;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: -1; */
 }
 
 .header-logo {
-    margin-top: -60px;
+    /* margin-top: -60px; */
 }
 
 .thrown-menu ul {
