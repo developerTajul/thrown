@@ -171,20 +171,40 @@
         }
 
       }
+      .list-image-wrapper{
+        display: flex;
+        gap: 24px;
+        margin-top: 32px;
+        margin-bottom: 48px;
+        align-items: center;
+        img{
+          width: 50%;
+        }
+      }
       .content-list-item {
-        margin-top: 24px;
-        padding-left: 24px;
-
+        margin: 0;
+        padding-left: 0px;
+        list-style: none;
         li {
-          margin-bottom: 8px;
+          list-style: none;
+          margin-bottom: 23px;
           font-size: 18px;
           font-family: $body-font;
           font-style: normal;
-          font-weight: 400;
-          line-height: 140%;
-          color: $title-color;
-          letter-spacing: 0.36px;
+          line-height: 26px;
+          font-weight: 600;
+          transition: .5s;
           padding: 0;
+          display: flex;
+          align-items: center;
+          &:before{
+            content: "\f270";
+            font-family: 'bootstrap-icons';
+            line-height: 27px;
+            font-size: 22px;
+            padding-right: 8px;
+            font-weight: 400;
+          }
 
           &.light {
             font-size: 18px;
@@ -274,7 +294,7 @@
 // Standar Blog Post
 .single-post-item {
   // background-color: $background;
-  overflow: hidden;
+  // overflow: hidden;
   margin-bottom: 48px;
 
   .post-content-wrapper {
@@ -433,7 +453,7 @@
   }
 
   .post-title {
-    margin-bottom: -4px;
+    margin-bottom: 16px;
     @include sm {
       font-size: 28px;
       line-height: 42px;
@@ -485,22 +505,21 @@
     flex-shrink: 0;
 
     a {
-      &.linkedin,
-      &.facebook,
-      &.twitter {
-        color: $title-color;
-        width: 32px;
-        height: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: $brand;
-        border-radius: 50px;
+      margin-left: 6px;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      border: 1px solid #0154F7;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+      color: #0154F7;
+      position: relative;
+      z-index: 1;
         i {
           line-height: 14px;
           font-size: 16px;
         }
-      }
       &:hover {
         background: $title-color;
         color: $white;
@@ -522,15 +541,15 @@
     display: inline-block;
 
     span {
-      font-size: 16px;
-      font-weight: 700;
       font-family: $body-font;
       color: $secondary-color;
       margin-bottom: 0;
-      margin-right: 16px;
       text-transform: capitalize;
       margin-top: 0;
       float: left;
+      font-size: 24px;
+      font-weight: 500;
+      margin-right: 36px;
 
       @include sm {
         width: 100%;
@@ -541,15 +560,20 @@
       flex-wrap: wrap;
       gap: 8px;
       align-items: center;
-      margin-top: 12px;
 
       a {
-        color: $title-color;
-        background-color: #F8F8F1;
         display: inline-block;
-        font-size: 14px;
-        line-height: 1;
-        padding: 9px 12px;
+        text-decoration: none;
+        padding: 7px 14px;
+        background: #F8F8F8;
+        border-radius: 3px;
+        color: #102039;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        position: relative;
+        transition: .5s;
+        z-index: 1;
         @include transition;
   
         &:hover {
@@ -715,7 +739,9 @@
     margin-bottom: 24px;
     flex-wrap: wrap;
     i{
-      display: none;
+      // display: none;
+      font-size: 16px;
+      line-height: 24px;
     }
     @include sm {
       gap: 4px;

@@ -290,12 +290,16 @@ img {
 }
 // Blockquote
 blockquote {
-  overflow: hidden;
+  // overflow: hidden;
   //padding: 30px 30px 30px 30px !important;
   margin: 48px 0;
   position: relative;
   z-index: 1;
   padding-left: 24px;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.10);
+  padding: 42px 40px 37px;
   @include sm {
     padding-left: 16px;
   }
@@ -315,13 +319,13 @@ blockquote {
   //  background-position: center center;
   //}
   p {
-    font-size: 18px;
     font-family: $body-font;
     font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 10px 0 15px;
     letter-spacing: 0.36px;
-    margin-top: 0 !important;
 
     @include sm {
       font-size: 16px;
@@ -333,18 +337,16 @@ blockquote {
     }
   }
   footer {
-    font-size: 18px;
-    font-family: $heading-font;
-    font-style: normal;
+    color: #0154F7;
+    font-size: 24px;
     font-weight: 500;
-    line-height: 140%;
-    letter-spacing: 0.36px;
-    color: $secondary-color;
+    position: relative;
+    margin-left: 50px;
     margin-top: 16px;
   }
 }
 .wp-block-quote, blockquote {
-  border-left: solid 5px $primary-color;
+  // border-left: solid 5px $primary-color;
 }
 .wp-block-pullquote {
   border-top: 5px solid $primary-color !important;

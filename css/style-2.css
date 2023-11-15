@@ -6394,7 +6394,7 @@ blockquote footer {
 
 blockquote footer::before { 
     position: absolute;
-    content: "\f10e";
+    content: "";
     height: 3px;
     width: 40px;
     background:#0154F7;
