@@ -7,12 +7,14 @@
 html,
 body {
   height: 100%;
+  width: 100%;
   font-size: 18px;
   font-weight: 400;
   font-family: $body-font;
   color: $text-color;
   vertical-align: baseline;
   line-height: 30px;
+  overflow: auto;
 }
 p {
   margin: 0 0 15px;

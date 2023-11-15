@@ -181,6 +181,10 @@ a.meanmenu-reveal {
         }
     }
 }
+.thrown-header-area{
+    @include transition;
+}
 .sticky-nav{
     position: fixed;
+    @include transition;
 }

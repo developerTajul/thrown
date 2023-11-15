@@ -15,7 +15,7 @@
         var scroll = $(window).scroll();
         console.log(scroll)
         if (scroll >= 500) {
-            console.log("s2")
+            
             $(".clearHeader").addClass("darkHeader");
         } else {
             $(".clearHeader").removeClass("darkHeader");
@@ -25,29 +25,23 @@
     const body = document.body;
     const html = document.documentElement;
     const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-   if(height>1400){
-    $(window).scrollTop(function () {
-        console.log("s")
-    })
-   }
     if( height  > 1400 ) {
-        const nav = $(".sticky-header");
+        const nav = $(".thrown-header-area.sticky-header");
         let scrolled = false;
-        if (100 < $(window).scrollTop()) {
-            
-            nav
-                .addClass("sticky-nav")
-                .animate({ "margin-top": "10px" });
-            scrolled = true;
-        }
-        if (100 > $(window).scrollTop() && scrolled) {
-            nav.removeClass("sticky-nav").css("margin-top", "0px");
-            scrolled = false;
-        }
-        $(window).scroll(function () {
+        console.log("s")
+        $('body').scroll(function () {
+            if (100 < $('body').scrollTop() && !scrolled) {
+                nav
+                    .addClass("sticky-nav")
+                    .animate({ "margin-top": "0px" });
+                scrolled = true;
+            }
+            if (100 > $('body').scrollTop() && scrolled) {
+                nav.removeClass("sticky-nav").css("margin-top", "0px");
+                scrolled = false;
+            }
         });
     }
-
     // Preloader
     $(document).ready(function () {
         setTimeout(function () {

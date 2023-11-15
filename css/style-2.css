@@ -272,7 +272,7 @@ a.handbag:before {
 }
 
 .sticky-nav .header-logo {
-    margin-top: -8px;
+    /* margin-top: -8px; */
 }
 
 /* sticky menu */
