@@ -1,0 +1,478 @@
+* {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: $body-font;
+  color: $text-color;
+  vertical-align: baseline;
+  line-height: 30px;
+  overflow: auto;
+}
+p {
+  margin: 0 0 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  color: $title-color;
+  font-style: normal;
+  @include transition;
+}
+
+h1 {
+  font-size: 76px;
+  line-height: 91px;
+  font-weight: 600;
+
+  @include rmaxwd(1199) {
+    font-size: 57px;
+    line-height: 68px;
+  }
+}
+h2 {
+  font-size: 57px;
+  line-height: 68px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  @include rmaxwd(1199) {
+    font-size: 43px;
+    line-height: 52px;
+  }
+}
+h3 {
+  font-size: 43px;
+  line-height: 52px;
+  font-weight: 600;
+
+  @include rmaxwd(1199) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+h4 {
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 600;
+
+  @include rmaxwd(1199) {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+h5 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  @include rmaxwd(1199) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+h6 {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+
+  @include rmaxwd(1199) {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+label {
+  color: $text-color;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+}
+button {
+  cursor: pointer;
+  @include transition;
+}
+a:not([href]):not([tabindex]) {
+  text-decoration: none;
+}
+
+a,
+button {
+  color: $title-color;
+  outline: medium none;
+  @include transition;
+  text-decoration: none;
+
+  &:hover {
+    color: $icon-color;
+    @include transition;
+  }
+}
+
+a:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+a:focus {
+  color: $title-color;
+  text-decoration: none;
+  @include transition;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+  outline: 0;
+}
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+
+::-moz-selection {
+  background: $primary-color;
+  text-shadow: none;
+  color: #fff;
+}
+::selection {
+  background: $primary-color;
+  text-shadow: none;
+  color: #fff;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.background-black {
+  background-color: $secondary-color;
+}
+.background-blue {
+  background-color: $blue-color;
+}
+.background-skye {
+  background-color: $sky-color;
+}
+.background-gray {
+  background-color: $gray-50;
+}
+.page-bg {
+  background-color: $black;
+}
+
+.background-primary {
+  background-color: $background;
+}
+
+.page-area {
+  padding-top: 111px;
+  padding-bottom: 100px;
+}
+.blog-area {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+.page-area,
+.blog-area {
+
+  @include rmaxwd(991) {
+    padding-top: 100px;
+    padding-bottom: 52px;
+  }
+  @include rmaxwd(767) {
+    padding-top: 70px;
+    padding-bottom: 22px;
+  }
+  .page-links {
+    margin-bottom: 20px;
+  }
+}
+
+.theme-btn,
+.wp-block-loginout a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $title-color;
+  padding: 15.5px 32px;
+  border: 1px solid $brand;
+  text-align: center;
+  border-radius: 4px;
+  background: $brand;
+  text-transform: capitalize;
+  font-family: $body-font;
+  font-size: 18px;
+  line-height: 31px;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  gap: 10px;
+  @include sm {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  @include md {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  &:hover {
+    background: $title-color;
+    color: #fff;
+    border-color: $title-color;
+  }
+  &.style-two {
+    border: 1px solid $white;
+    background: transparent;
+    color: $white;
+    &:hover {
+      background: $brand;
+      color: $title-color;
+      border-color: $brand;
+    }
+  }
+  &.style-three {
+    border: 1px solid $text-color;
+    color: $title-color;
+    background: transparent;
+    padding: 16px 24px;
+    line-height: 170%;
+      font-size: 16px;
+    @include transition;
+
+    @include sm {
+      padding: 12px 24px;
+    }
+    &:hover {
+      background: $brand;
+      color: $title-color;
+      border-color: transparent;
+    }
+  }
+  &.style-four {
+    border: 1px solid transparent;
+    &:hover {
+      background: transparent;
+      border-color: $white;
+    }
+    //@include sm {
+    //  padding: 10px 12px;
+    //}
+    //@include md {
+    //  padding: 10px 20px;
+    //}
+  }
+}
+
+.theme-transparant-btn {
+  background: transparent;
+  border: 1px solid $white;
+  color: $white;
+  // margin-left: 10px;
+  &:hover {
+    background: $brand;
+    color: $title-color;
+    border-color: transparent;
+  }
+}
+
+.background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.pl-312 {
+  padding-left: 312px;
+}
+
+.mt-64 {
+  margin-top: 64px;
+}
+.mt-lg-64 {
+  @include lg {
+    margin-top: 64px;
+  }
+}
+.mt-48 {
+  margin-top: 48px;
+}
+.mt-36 {
+  margin-top: 36px;
+}
+.mt-24 {
+  margin-top: 24px;
+}
+.mt-12 {
+  margin-top: 12px;
+}
+.mb-64 {
+  margin-bottom: 64px;
+}
+.mb-48 {
+  margin-bottom: 48px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+
+.custom-container {
+   max-width: 1728px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #033F47;
+  @include rmaxwd(1800) {
+    background-size: cover;
+  }
+}
+
+.breadcrumb-shape {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.custom-container-60 {
+  width: 100%;
+  overflow: hidden;
+  padding-right: 0;
+  @include sm {
+    padding: 0 12px;
+    width: 100%;
+  }
+}
+
+
+
+// certified video btn
+.certified {
+  z-index: 5;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(224, 247, 128, 0.5);
+  width: 135px;
+  height: 135px;
+  border-radius: 100px;
+  @include sm {
+    width: 70px;
+    height: 70px;
+  }
+  @include md {
+    width: 80px;
+    height: 80px;
+  }
+  @include lg {
+    width: 100px;
+    height: 100px;
+  }
+  i {
+    color: $title-color;
+    font-size: 34px;
+    position: absolute;
+    @include sm {
+      font-size: 20px;
+    }
+    @include md {
+      font-size: 20px;
+    }
+    @include lg {
+      font-size: 20px;
+    }
+  }
+  .rounded-text {
+    width: 115px;
+    height: 115px;
+    text-transform: uppercase;
+    transform: rotate(-106deg);
+    color: #fff;
+    font-weight: 400;
+    z-index: 10;
+    font-family: $heading-font;
+    @include sm {
+      width: 60px;
+      height: 60px;
+    }
+    @include md {
+      width: 70px;
+      height: 70px;
+    }
+    @include lg {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  @keyframes rotating {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  .rotating {
+    animation: rotating 12s linear infinite;
+  }
+}
+
+// background-color
+.bg-icon {
+  background-color: $icon-color;
+}
+.bg-gray {
+  background-color: $background !important;
+}
+
+// Animation
+.upDown{
+  animation: MoveUpDown 2s linear infinite alternate;
+}
