@@ -210,7 +210,7 @@ input:focus {
 }
 
 .page-bg {
-  background-color: #020a27;
+  background-color: #010212;
 }
 
 .background-primary {
@@ -3948,7 +3948,7 @@ body.admin-bar .header-menu-area.sticky_menu {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
-  background-color: #020a27;
+  background-color: #010212;
 }
 .widget_promotion .wp-block-heading {
   width: 100%;
@@ -4156,36 +4156,74 @@ a.meanmenu-reveal {
   display: none !important;
 }
 
-.header-logo {
+.solid-bg {
   position: relative;
 }
-.header-logo:before {
-  content: "";
-  background-color: #0154F7;
-  width: 522px;
-  height: 170px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(0, -35%);
+
+.header-logo {
+  position: relative;
 }
 .header-logo img {
   z-index: 99;
   position: relative;
 }
 
+.header-top-wrapper {
+  position: relative;
+}
+.header-top-wrapper:before {
+  content: "";
+  background-color: #0154F7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, 0);
+}
+.header-top-wrapper .thrown-topbar-area {
+  background: #010212;
+  padding: 17px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.header-top-wrapper .thrown-topbar-area:after {
+  content: "";
+  background-color: #010212;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(100%, 0);
+}
+.header-top-wrapper .thrown-topbar-area .topbar-info {
+  flex-grow: 2;
+  display: flex;
+  justify-content: end;
+}
+.header-top-wrapper .thrown-topbar-area .topbar-social-item {
+  flex-grow: 1;
+}
 .header-top-wrapper .menu-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 24px;
+  justify-content: end;
 }
 .header-top-wrapper .menu-wrapper ul {
   margin-bottom: 0;
   padding-left: 0;
 }
+.header-top-wrapper .menu-wrapper .thrown-menu {
+  flex-grow: 2;
+  display: flex;
+  justify-content: end;
+}
 .header-top-wrapper .menu-wrapper .thrown-search-button {
   margin-left: 0;
+  flex-grow: 1;
 }
 
 .thrown-header-area {
@@ -4193,8 +4231,20 @@ a.meanmenu-reveal {
 }
 
 .sticky-nav {
-  position: fixed;
-  transition: all 0.5s ease-out;
+  left: 0;
+  margin: auto;
+  top: 0;
+  right: 0;
+  width: 100%;
+  position: fixed !important;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
+  -webkit-animation: 300ms running fadeInDown;
+  animation: 500ms running fadeInUp;
+  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  transition: 0.5s !important;
+  background: white !important;
+  z-index: 9999 !important;
+  animation-name: slideInDown;
 }
 
 /*Comment Input Filed*/
@@ -4464,7 +4514,7 @@ a.meanmenu-reveal {
   padding: 0;
 }
 .comment-respond.style-two label {
-  color: #020a27;
+  color: #010212;
 }
 .comment-respond.style-two input[type=submit] {
   display: inline-block;

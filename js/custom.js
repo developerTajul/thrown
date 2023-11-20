@@ -86,7 +86,7 @@
         infinite: false,
         autoplay: true,
         draggable: true,
-        arrows: true,
+        arrows: false,
         slidesToScroll: 1,
         loop: true,
         dots: false,

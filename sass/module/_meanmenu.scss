@@ -149,42 +149,101 @@ a.meanmenu-reveal {
 .mean-remove {
     display: none !important;
 }
+.solid-bg{
+    position: relative;
+    // height: 171px;
+    
+}
 .header-logo{
     position: relative;
-    &:before{
-        content: "";
-        background-color: $primary-color;
-        width: 522px;
-        height: 170px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(0, -35%);
-    }
+    // &:before{
+    //     content: "";
+    //     background-color: $primary-color;
+    //     width: 522px;
+    //     height: 171px;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     transform: translate(0, -35%);
+    // }
     img{
         z-index: 99;
         position: relative;
     }
 }
 .header-top-wrapper{
+    position: relative;
+    &:before{
+        content: "";
+        background-color: $primary-color;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-100%, 0);
+    }
+    .thrown-topbar-area {
+        background: $black;
+        padding: 17px 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        &:after{
+            content: '';
+            background-color: $black;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate( 100%, 0);
+        }
+        .topbar-info{
+            flex-grow: 2;
+            display: flex;
+            justify-content: end;
+        }
+        .topbar-social-item{
+            flex-grow: 1;
+        }
+    }
     .menu-wrapper{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding-left: 24px;
+        justify-content: end;
         ul{
             margin-bottom: 0;
             padding-left: 0;
         }
+        .thrown-menu{
+            flex-grow: 2;
+            display: flex;
+            justify-content: end;
+        }
         .thrown-search-button{
             margin-left: 0;
+            flex-grow: 1;
         }
     }
 }
 .thrown-header-area{
     @include transition;
 }
-.sticky-nav{
-    position: fixed;
-    @include transition;
+.sticky-nav {
+    left: 0;
+    margin: auto;
+    top: 0;
+    right: 0;
+    width: 100%;
+    position: fixed !important;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
+    -webkit-animation: 300ms running fadeInDown;
+    animation: 500ms running fadeInUp;
+    -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    transition: 0.5s !important;
+    background: #ffff!important;
+    z-index: 9999 !important;
+    animation-name: slideInDown;
 }
