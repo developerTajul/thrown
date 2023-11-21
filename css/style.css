@@ -4247,6 +4247,108 @@ a.meanmenu-reveal {
   animation-name: slideInDown;
 }
 
+.page-breadcrumb-area {
+  position: relative;
+  background-image: url(../images/resource/breatcome-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 154px 0;
+  background-color: #f8f8f1;
+}
+.page-breadcrumb-area .shape {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+@media (max-width: 991px) {
+  .page-breadcrumb-area {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 767px) {
+  .page-breadcrumb-area {
+    padding: 80px 0;
+  }
+}
+
+.page-heading h3,
+.page-heading .page-title {
+  color: #ffffff;
+  font-family: "Jost", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+@media (max-width: 375px) {
+  .page-heading h3,
+  .page-heading .page-title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .page-heading h3,
+  .page-heading .page-title {
+    font-size: 42px;
+    line-height: 52px;
+  }
+}
+
+.breadcrumb-wrapper {
+  padding: 0 100px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1199px) {
+  .breadcrumb-wrapper {
+    padding: 0;
+  }
+}
+
+.breadcrumb-list {
+  text-align: center;
+}
+.breadcrumb-list ul {
+  margin-bottom: 0;
+  padding-left: 0;
+  display: inline-flex;
+  gap: 0 12px;
+}
+.breadcrumb-list ul li {
+  list-style: none;
+  display: inline-flex;
+  gap: 0 12px;
+  align-items: center;
+  color: #ffffff;
+}
+.breadcrumb-list ul li a {
+  font-family: "Heebo", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: capitalize;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-decoration: unset;
+  position: relative;
+  transition: all 0.5s ease-out;
+}
+.breadcrumb-list ul li a:hover {
+  transition: all 0.5s ease-out;
+  text-decoration: underline;
+}
+.breadcrumb-list ul li:before {
+  content: "/";
+  left: 54px;
+  font-size: 25px;
+}
+.breadcrumb-list ul li:first-child:before {
+  display: none;
+}
+
 /*Comment Input Filed*/
 .post-comments-form.style-two {
   padding: 0;
