@@ -140,12 +140,12 @@ Tags: architect, building company, construction, construction template, construc
 /*==================================================
  <-- Thrown Header Area Css-->
 ===================================================*/
-.thrown-header-area {
+.header-menu-area {
     position: relative;
     z-index: 9;
 }
 
-.thrown-header-area::before {
+.header-menu-area::before {
     /* position: absolute;
     content: "";
     width: 500px;
@@ -2142,12 +2142,12 @@ ul.accordion ul li a span {
 <-- Thrown Header Style two Css-->
 =================================================================*/
 
-.thrown-header-area.style-two {
+.header-menu-area.style-two {
     margin-bottom: -102px;
     z-index: 9;
 }
 
-.thrown-header-area.style-two::before{
+.header-menu-area.style-two::before{
     display: none;
 }
 
@@ -3445,12 +3445,12 @@ section.banner-section.style-three .banner-carousel .slide-item{
 <-- Thrown Header Style Three Css-->
 =================================================================*/
 
-.thrown-header-area.style-three {
+.header-menu-area.style-three {
     z-index: 999;
     margin-bottom: -132px;
 }
 
-.thrown-header-area.style-three::before {
+.header-menu-area.style-three::before {
     background: #fff;
     width: 70%;
     left: 0;
@@ -4473,7 +4473,7 @@ section.banner-section.style-three.banner-section .owl-nav {
 <-- Thrown Header Area Style Five Css-->
 =================================================================*/
 
-.thrown-header-area.style-five::before {
+.header-menu-area.style-five::before {
     display: none;
 }
 
@@ -5228,7 +5228,7 @@ section.banner-section.style-five .owl-nav {
 
 /* header area */
 
-.thrown-header-area.dark {
+.header-menu-area.dark {
     background: #112143;
 }
 
@@ -5543,11 +5543,11 @@ section.banner-section.style-five .owl-nav {
 
 /* header area */
 
-.thrown-header-area.style-three.dark {
+.header-menu-area.style-three.dark {
     background: #112143;
 }
 
-.thrown-header-area.style-three.dark::before{
+.header-menu-area.style-three.dark::before{
     display: none;
 }
 

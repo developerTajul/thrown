@@ -16,7 +16,7 @@
 
 /* header area css */
 
-.thrown-header-area::before {
+.header-menu-area::before {
     width: 240px;
 }
 
@@ -214,11 +214,11 @@
 
 /* header style three */
 
-.thrown-header-area.style-three {
+.header-menu-area.style-three {
     margin-bottom: 0;
 }
 
-.thrown-header-area.style-three::before {
+.header-menu-area.style-three::before {
     width: 100%;
 }
 
@@ -427,11 +427,11 @@ section.banner-section.style-three .banner-carousel .slide-item {
 
 /* header area css */
 
-.thrown-header-area {
+.header-menu-area {
     padding: 30px 0;
 }
 
-.thrown-header-area::before {
+.header-menu-area::before {
     width: 223px;
 }
 
@@ -759,11 +759,11 @@ section.banner-section.style-three .banner-carousel .slide-item {
 
 /* header style three */
 
-.thrown-header-area.style-three {
+.header-menu-area.style-three {
     margin-bottom: 0;
 }
 
-.thrown-header-area.style-three::before {
+.header-menu-area.style-three::before {
     width: 100%;
 }
 
@@ -898,7 +898,7 @@ section.banner-section.style-three .banner-carousel .slide-item {
 
 /* header area */
 
-.thrown-header-area.style-two {
+.header-menu-area.style-two {
     margin-bottom: -164px;;
 }
     
@@ -1163,7 +1163,7 @@ section.banner-section.style-three .banner-carousel .slide-item {
 
 /* header area */
 
-.thrown-header-area {
+.header-menu-area {
     display: none;
 }
 
@@ -1985,7 +1985,7 @@ section.banner-section.style-three .banner-carousel .slide-item {
 
 /* header area */
 
-.thrown-header-area {
+.header-menu-area {
     display: none;
 }
 
@@ -2952,7 +2952,7 @@ section.banner-section.style-three .banner-carousel .slide-item {
 
 /* header area */
 
-.thrown-header-area {
+.header-menu-area {
     display: none;
 }
 
@@ -3930,7 +3930,7 @@ section.banner-section.style-three .banner-carousel .slide-item {
 
 /* header area */
 
-.thrown-header-area {
+.header-menu-area {
     display: none;
 }
 
@@ -5024,7 +5024,7 @@ section.banner-section.style-three .banner-carousel .slide-item {
 
 /* header area */
 
-.thrown-header-area {
+.header-menu-area {
     display: none;
 }
 

@@ -190,6 +190,7 @@ a.meanmenu-reveal {
         display: flex;
         align-items: center;
         justify-content: end;
+        @include transition;
         &:after{
             content: '';
             background-color: $black;
@@ -228,7 +229,7 @@ a.meanmenu-reveal {
         }
     }
 }
-.thrown-header-area{
+.header-menu-area{
     @include transition;
 }
 .sticky-nav {
@@ -244,6 +245,10 @@ a.meanmenu-reveal {
     -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
     transition: 0.5s !important;
     background: #ffff!important;
-    z-index: 9999 !important;
+    z-index: 999 !important;
     animation-name: slideInDown;
+    .thrown-topbar-area{
+        display: none;
+        @include transition;
+    }
 }

@@ -6,7 +6,6 @@
 
 html,
 body {
-  height: 100%;
   width: 100%;
   font-size: 18px;
   font-weight: 400;
@@ -4188,6 +4187,7 @@ a.meanmenu-reveal {
   display: flex;
   align-items: center;
   justify-content: end;
+  transition: all 0.5s ease-out;
 }
 .header-top-wrapper .thrown-topbar-area:after {
   content: "";
@@ -4226,7 +4226,7 @@ a.meanmenu-reveal {
   flex-grow: 1;
 }
 
-.thrown-header-area {
+.header-menu-area {
   transition: all 0.5s ease-out;
 }
 
@@ -4243,8 +4243,12 @@ a.meanmenu-reveal {
   -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
   transition: 0.5s !important;
   background: white !important;
-  z-index: 9999 !important;
+  z-index: 999 !important;
   animation-name: slideInDown;
+}
+.sticky-nav .thrown-topbar-area {
+  display: none;
+  transition: all 0.5s ease-out;
 }
 
 .page-breadcrumb-area {

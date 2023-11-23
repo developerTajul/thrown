@@ -26,13 +26,30 @@
     const html = document.documentElement;
     const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
     if( height  > 1400 ) {
-        const nav = $(".thrown-header-area.sticky-header");
+        const nav = $(".header-menu-area.sticky-header");
         let scrolled = false;
-        $('body').scroll(function () {
-            if (100 < $('body').scrollTop() && !scrolled) {
+        $(window).scroll(function () {
+            if (100 < $(window).scrollTop() && !scrolled) {
                 nav
                     .addClass("sticky-nav")
                     .animate({ "margin-top": "0px" });
+                scrolled = true;
+            }
+            if (100 > $(window).scrollTop() && scrolled) {
+                nav.removeClass("sticky-nav").css("margin-top", "0px");
+                scrolled = false;
+            }
+        });
+    }
+    if( height  > 1400 ) {
+        const nav = $(".header-menu-area.sticky-header");
+        let scrolled = false;
+        $('body').scroll(function () {
+            if (100 < $('body').scrollTop() && !scrolled) {
+                console.log('sdlf')
+                nav
+                    .addClass("sticky-nav")
+                    .animate({"margin-top": "0px"});
                 scrolled = true;
             }
             if (100 > $('body').scrollTop() && scrolled) {
