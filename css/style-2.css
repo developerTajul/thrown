@@ -156,7 +156,7 @@ Tags: architect, building company, construction, construction template, construc
     z-index: -1; */
 }
 
-.header-logo {
+.logo {
     /* margin-top: -60px; */
 }
 
@@ -249,7 +249,7 @@ a.handbag:before {
 
 
 
-.sticky-nav .header-logo {
+.sticky-nav .logo {
     /* margin-top: -8px; */
 }
 
@@ -2151,7 +2151,7 @@ ul.accordion ul li a span {
     display: none;
 }
 
-.header-logo.style-two {
+.logo.style-two {
     margin-top: 0;
 }
 
@@ -3458,7 +3458,7 @@ section.banner-section.style-three .banner-carousel .slide-item{
     margin: auto;
 }
 
-.header-logo.style-three {
+.logo.style-three {
     margin-top: 0;
 }
 
@@ -4477,7 +4477,7 @@ section.banner-section.style-three.banner-section .owl-nav {
     display: none;
 }
 
-.header-logo.style-five {
+.logo.style-five {
     margin-top: 0;
 }
 
@@ -5232,7 +5232,7 @@ section.banner-section.style-five .owl-nav {
     background: #112143;
 }
 
-.sticky-menu .header-logo.dark {
+.sticky-menu .logo.dark {
     margin-top: 0;
 }
 

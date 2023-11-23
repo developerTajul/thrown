@@ -164,8 +164,6 @@
   z-index: 999;
   transition: all 0.4s ease 0s;
   position: relative;
-  padding-right: 96px;
-  padding-left: 96px;
   @include transition;
 
   @include sm {
@@ -235,7 +233,7 @@
   }
   // Header Logo
   .logo {
-    height: 112px;
+    height:  auto;
     display: flex;
     align-items: center;
 
