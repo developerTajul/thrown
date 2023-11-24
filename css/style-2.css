@@ -459,6 +459,7 @@ a.handbag:before {
     padding: 13px 30px;
     border-radius: 35px;
     z-index: 1;
+    overflow: hidden;
 }
 
 .header-button {

@@ -4737,6 +4737,8 @@ a.meanmenu-reveal {
 .header-top-wrapper .menu .thrown-search-button {
   margin-left: 0;
   flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
 .header-menu-area {
