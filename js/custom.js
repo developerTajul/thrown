@@ -163,7 +163,7 @@
         autoplay: true,
         draggable: true,
         arrows: false,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         loop: true,
         dots: true,
         speed: 1000,
