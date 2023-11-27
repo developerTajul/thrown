@@ -1,0 +1,475 @@
+.slider-container {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  @include sm {
+    padding: 0 12px;
+  }
+  @include md {
+    padding: 0 12px;
+  }
+}
+.slider-area {
+  position: relative;
+  &:hover{
+    .slider-arrow-btn{
+      visibility: visible;
+      @include transition;
+      &.prev-btn{
+        margin-left: 30px;
+      }
+      &.next-btn{
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .slider-wrapper {
+    // Active Slider Animate
+    .slick-active .slider-short-title,
+    .slick-active .slider-title,
+    .slick-active .slider-short-desc,
+    .slick-active .slider-btn-wrapper {
+      -webkit-animation-name: MovefadeUp;
+      animation-name: MovefadeUp;
+      -webkit-animation-fill-mode: both;
+    }
+
+    .slick-active .slider-short-title {
+      animation-delay: 0.3s;
+      animation-duration: 0.3s;
+    }
+    .slick-active .slider-title {
+      animation-delay: 0.5s;
+      animation-duration: 0.5s;
+    }
+
+    .slick-active .slider-short-desc {
+      animation-delay: 0.7s;
+      animation-duration: 0.7s;
+    }
+
+    .slick-active .slider-btn-wrapper {
+      animation-delay: 0.9s;
+      animation-duration: 0.9s;
+    }
+
+    // Slick Dots
+    .slick-dots {
+      display: flex;
+      gap: 0;
+      position: absolute;
+      bottom: 0;
+      right: 96px;
+      transform: translateY(-50%);
+      z-index: 2;
+      flex-direction: row;
+
+      @include sm {
+        display: none !important;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        right: 70px;
+        transform: none;
+      }
+      @include md {
+        right: 12px;
+      }
+
+      li {
+        line-height: 0;
+        border: 3px solid transparent;
+        width: 48px;
+        height: 48px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-left: -5px;
+        @include transition;
+        position: relative;
+
+        &:before,
+        &:after {
+          box-sizing: inherit;
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 100px;
+        }
+        &:before {
+          border: 3px solid transparent;
+        }
+        &:hover {
+          &:before {
+            border-top-color: $black;
+            border-right-color: $black;
+            border-bottom-color: $black;
+            transition:
+              border-top-color 0.15s linear,
+              border-right-color 0.15s linear 0.1s,
+              border-bottom-color 0.15s linear 0.2s;
+          }
+        }
+        &:after {
+          border: 0 solid transparent;
+        }
+
+        &:hover {
+          &:after {
+            border-top: 3px solid $black;
+            border-left-width: 3px;
+            border-right-width: 3px;
+            transform: rotate(270deg);
+          }
+        }
+
+        button {
+          font-size: 0;
+          line-height: 14px;
+          padding: 0;
+          width: 12px;
+          height: 12px;
+          background-color: #c3e4de;
+          color: $white;
+          border-radius: 50px;
+          position: relative;
+          @include transition;
+        }
+        &.slick-active {
+          @include transition;
+          border-color: $black;
+          &:before,
+          &:after {
+            display: none;
+          }
+          button {
+            font-size: 16px;
+            background: transparent;
+            @include transition;
+          }
+        }
+      }
+    }
+  }
+
+  // Slick Nav Arrow Button
+  button.slider-arrow-btn {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    transition: 0.3s;
+    z-index: 99;
+    background-color: $primary-color;
+    // border: 1px solid $white;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    visibility: hidden;
+    @include transition;
+
+    @include rmaxwd(1650) {
+      width: 44px;
+      height: 44px;
+      bottom: 30px !important;
+    }
+    @include rmaxwd(767) {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include rmaxwd(1650) {
+      bottom: 0;
+      top: unset;
+      display: none !important;
+    }
+    &.prev-btn {
+      left: 0;
+      margin-left: -70px;
+      @include transition;
+      @include rmaxwd(1650) {
+        left: 50%;
+        margin-left: -50px;
+      }
+    }
+    &.next-btn {
+      right: 0;
+      margin-right: -70px;
+      @include transition;
+      @include rmaxwd(1650) {
+        right: 50%;
+        margin-right: -50px;
+      }
+    }
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+      font-size: 21px;
+    }
+    &:hover {
+      @include transition;
+      background-color: $secondary-color;
+      i {
+        @include transition;
+      }
+    }
+  }
+  .single-slider {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    z-index: 2;
+    padding: 150px 48px 82px 48px;
+    height: 935px;
+
+    @include sm {
+      padding: 130px 0 64px 0;
+      height: 100%;
+    }
+    @include md {
+      height: 600px;
+      padding: 120px 32px 64px 24px;
+    }
+    @include lg {
+      height: 700px;
+      padding: 80px 24px 64px 24px;
+    }
+    @include xl {
+      height: 750px;
+    }
+    .slider-content-wrapper {
+      position: relative;
+      z-index: 99;
+      @include sm {
+        padding: 12px;
+      }
+      @include md {
+        padding: 0;
+      }
+      .shape{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      .slider-content {
+        @include sm {
+          text-align: center;
+          position: relative;
+          z-index: 5;
+        }
+
+        .slider-short-title {
+          font-family: $heading-font;
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 0.32px;
+          line-height: 22px;
+          color: $secondary-color;
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 16px;
+          position: relative;
+          text-transform: uppercase;
+          z-index: 99;
+          
+          @include lg {
+            font-size: 16px;
+          }
+        }
+        .slider-title {
+          font-family: $heading-font;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 68px;
+          line-height: 75px;
+          letter-spacing: 0.02em;
+          margin-bottom: 24px;
+          color: $black;
+          position: relative;
+          z-index: 10;
+          span{
+            background-color: #FFCBBF;
+          }
+          @media only screen and (min-width: 992px) and (max-width: 1400px) {
+            font-size: 60px;
+            line-height: 64px;
+          }
+
+          @include lg {
+            font-size: 48px;
+            line-height: 56px;
+          }
+          @include md {
+            font-size: 36px;
+            line-height: 52px;
+            br {
+              display: none;
+            }
+          }
+          @include sm {
+            font-size: 40px;
+            line-height: 60px;
+            br {
+              display: none;
+            }
+          }
+        }
+        .slider-short-desc {
+          font-family: $body-font;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 34px;
+          color: $black;
+
+          @include rmaxwd(1900) {
+            font-size: 18px;
+            line-height: 32px;
+            br {
+              display: none;
+            }
+          }
+          @include md {
+            font-size: 18px;
+            line-height: 32px;
+            br {
+              display: none;
+            }
+          }
+          @include sm {
+            font-size: 16px;
+            line-height: 32px;
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .slider-image {
+      position: relative;
+      z-index: 2;
+      // animation: MoveUpDown 2s linear infinite alternate;
+      right: 0;
+      top: 0;
+      height: 100%;
+      margin-left: 56px;
+      margin-right: -83px;
+      @include rmaxwd(1900){
+        margin-left: 0;
+        margin-right: 0;
+      }
+      @include sm {
+        animation: none;
+        margin: 0 auto;
+        text-align: center;
+        // width: 300px;
+        margin-top: 32px;
+      }
+      img {
+        height: 100%;
+        position: relative;
+        z-index: 5;
+      }
+      .sketch {
+        position: absolute;
+        top: 0;
+        right: 0;
+        animation: MoveLeftRight 2s linear infinite alternate;
+        @include rmaxwd(1339) {
+          display: none;
+        }
+      }
+      .achieve {
+        @include rwd(1440) {
+          width: auto;
+          height: auto;
+          position: absolute;
+          bottom: 0;
+          left: -62px;
+          transform: translate(50%, 50%);
+          animation: MoveUpDown 2s linear infinite alternate;
+          z-index: 8;
+          display: flex;
+        }
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $white;
+        border-radius: 24px;
+        display: none;
+        .content{
+          text-align: center;
+          h2{
+            color: $primary-color;
+            font-family: 'DM Sans', sans-serif;;
+            font-size: 62px;
+            line-height: 110%;
+            letter-spacing: -1.24px;
+          }
+          p{
+            color: $black;
+            font-family: $body-font;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 34px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Banner-section
+.banner-section{
+  .banner-carousel{
+    .slick-dots {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+      flex-direction: column;
+      padding-left: 0;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(50%,-50%);
+      @include rmaxwd(767) {
+        margin-top: 40px;
+      }
+      li {
+        line-height: 0;
+        button {
+          background: #FFF;
+          height: 50px;
+          width: 50px;
+          line-height: 50px;
+          text-align: center;
+          border-radius: 50%;
+          color: #000;
+          position: relative;
+          z-index: 1;
+          @include transition;
+        }
+        &.slick-active {
+          button {
+            background: $primary-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+

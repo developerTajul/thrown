@@ -106,7 +106,7 @@
         arrows: false,
         slidesToScroll: 1,
         loop: true,
-        dots: false,
+        dots: true,
         speed: 300,
         prevArrow:
             "<button type='button' class='banner-slider-btn prev-btn'><i class='fa fa-arrow-left'></i></button>",
@@ -156,6 +156,67 @@
         ],
     });
 
+    // Testimonial slider
+    $(".testimonial-slider").slick({
+        slidesToShow: 2,
+        infinite: true,
+        autoplay: true,
+        draggable: true,
+        arrows: false,
+        slidesToScroll: 1,
+        loop: true,
+        dots: true,
+        speed: 1000,
+        prevArrow:
+            "<button type='button' class='slider-arrow-btn prev-btn'><i class='fa fa-long-arrow-left'></i></button>",
+        nextArrow:
+            "<button type='button' class='slider-arrow-btn next-btn'><i class='fa fa-long-arrow-right'></i></button>",
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    autoplay: true,
+                },
+            },
+        ],
+    });
+
+     /*
+        Counter Js
+        ============================*/
+        $(".counter").counterUp({
+            delay: 10,
+            time: 1000,
+        });
+
+    // =======< accordion js >========
+    $(".accordion > li:eq(0) a").addClass("active").next().slideDown();
+    $('.accordion a').on('click', function (j) {
+        var dropDown = $(this).closest("li").find("p");
+
+        $(this).closest(".accordion").find("p").not(dropDown).slideUp();
+
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+        } else {
+            $(this).closest(".accordion").find("a.active").removeClass("active");
+            $(this).addClass("active");
+        }
+
+        dropDown.stop(false, true).slideToggle();
+
+        j.preventDefault();
+    });
+    // Accordion height
+    const accordionEl = $(".accordion");
+        const  accordionHeight = accordionEl.innerHeight();
+        
+            var width = $(window).width();
+            if (width < 767){
+                accordionEl.css("height",'auto');
+            }else{
+                accordionEl.css("height",accordionHeight);
+            }
 
     // Script nav
     $(".team-btn").click(function () {
