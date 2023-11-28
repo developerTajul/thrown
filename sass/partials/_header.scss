@@ -1,10 +1,45 @@
 .header-area {
-/*  position: fixed;*/
-  // left: 0;
-  // right: 0;
+  // position: fixed;
   width: 100%;
   z-index: 999;
   @include transition;
+  &.style-2{
+    position: fixed;
+    .header-top-wrapper{
+      &:before{
+        display: none;
+      }
+    }
+    .menu{
+      .thrown-menu{
+        flex-grow: 1;
+        >ul{
+          >li{
+            >a{
+              color: $white;
+            }
+          }
+          .home-menu{
+
+          }
+        }
+      }
+    }
+    .thrown-social-menu{
+      ul{
+        li{
+          a{
+            i{
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    .sticky-nav{
+      background-color: #010212;
+    }
+  }
 }
 .header-top {
   background-color: $icon-color;

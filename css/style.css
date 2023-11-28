@@ -3993,10 +3993,27 @@ body.admin-bar .header-menu-area.sticky_menu {
 }
 
 .header-area {
-  /*  position: fixed;*/
   width: 100%;
   z-index: 999;
   transition: all 0.5s ease-out;
+}
+.header-area.style-2 {
+  position: fixed;
+}
+.header-area.style-2 .header-top-wrapper:before {
+  display: none;
+}
+.header-area.style-2 .menu .thrown-menu {
+  flex-grow: 1;
+}
+.header-area.style-2 .menu .thrown-menu > ul > li > a {
+  color: #ffffff;
+}
+.header-area.style-2 .thrown-social-menu ul li a i {
+  color: #ffffff;
+}
+.header-area.style-2 .sticky-nav {
+  background-color: #010212;
 }
 
 .header-top {
@@ -5401,21 +5418,23 @@ a.meanmenu-reveal {
 .header-top-wrapper .thrown-topbar-area .topbar-social-item {
   flex-grow: 1;
 }
-.header-top-wrapper .menu {
+
+.menu {
   display: flex;
   align-items: center;
   justify-content: end;
 }
-.header-top-wrapper .menu ul {
+.menu ul {
   margin-bottom: 0;
   padding-left: 0;
 }
-.header-top-wrapper .menu .thrown-menu {
+.menu .thrown-menu {
   flex-grow: 2;
   display: flex;
   justify-content: end;
 }
-.header-top-wrapper .menu .thrown-search-button {
+
+.thrown-search-button {
   margin-left: 0;
   flex-grow: 1;
   display: flex;
@@ -5439,7 +5458,7 @@ a.meanmenu-reveal {
   animation: 500ms running fadeInUp;
   -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
   transition: 0.5s !important;
-  background: white !important;
+  background: white;
   z-index: 999 !important;
   animation-name: slideInDown;
 }
