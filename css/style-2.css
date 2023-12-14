@@ -1933,6 +1933,7 @@ ul.accordion ul li a span {
 
 .footer-wiget-menu ul {
     list-style: none;
+    padding-left: 0;
 }
 
 .footer-wiget-menu ul li {
