@@ -204,7 +204,8 @@ a.meanmenu-reveal {
         .topbar-info{
             flex-grow: 2;
             display: flex;
-            justify-content: end;
+            justify-content: start;
+            padding-left: 17px;
         }
         .topbar-social-item{
             flex-grow: 1;

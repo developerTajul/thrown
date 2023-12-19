@@ -5413,7 +5413,8 @@ a.meanmenu-reveal {
 .header-top-wrapper .thrown-topbar-area .topbar-info {
   flex-grow: 2;
   display: flex;
-  justify-content: end;
+  justify-content: start;
+  padding-left: 17px;
 }
 .header-top-wrapper .thrown-topbar-area .topbar-social-item {
   flex-grow: 1;
